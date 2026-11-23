@@ -160,11 +160,11 @@ const ADMIN={token:null,io:null,info:null,filtro:"tutte",dettaglio:null,sezione:
             <tr data-ut="${i}">
                 <td><input type="text" class="ut-nome" maxlength="60" placeholder="Es. Padova" value="${escHtml(t.ut||"")}"></td>
                 <td><input type="text" class="ut-resp" maxlength="80" placeholder="Es. NAAPRO Padova" value="${escHtml(t.responsabile||"")}"></td>
-                <td><input type="email" class="ut-email" placeholder="email@cm.cri.it" value="${escHtml(t.email||"")}"></td>
+                <td><input type="text" class="ut-email" placeholder="email@cm.cri.it, altra@cm.cri.it" title="Una o pi\xF9 email separate da virgola" value="${escHtml(t.email||"")}"></td>
                 <td style="text-align:right;"><button class="btn-sm rosso" data-togli="${i}" title="Elimina">\u{1F5D1}\uFE0F</button></td>
             </tr>`).join("");a.innerHTML=`
         <p class="nota">Ogni DSA (singola o periodica) viene inviata al responsabile dell'unit\xE0 territoriale scelta dalla persona: arriva all'Ufficio Operazioni solo dopo la sua conferma via mail.
-           Nei dati anagrafici la persona sceglie l'unit\xE0 da questo elenco. <b>Finch\xE9 l'elenco \xE8 vuoto le DSA vanno direttamente all'ufficio, come prima.</b></p>
+           Nei dati anagrafici la persona sceglie l'unit\xE0 da questo elenco. Pi\xF9 approvatori per la stessa unit\xE0? Scrivi pi\xF9 email separate da virgola: la richiesta arriva a tutti e basta la conferma di uno. <b>Finch\xE9 l'elenco \xE8 vuoto le DSA vanno direttamente all'ufficio, come prima.</b></p>
         <label style="font-weight:normal; display:flex; gap:8px; align-items:center; margin:8px 0;">
             <input type="checkbox" id="utAttiva" ${UT_ADMIN.approvazione?"checked":""}> Conferma del responsabile UT attiva
         </label>
